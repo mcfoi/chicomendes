@@ -24,6 +24,19 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#980126;                   /* Altro Mercato Rosso  color="#980126" ; Chico Mendes giallo color="#f89c27" */
+    background-image:linear-gradient(top, #f89c27 25%, #980126 75%);
+    background-image:-webkit-linear-gradient(top, #f89c27 25%, #980126 75%);
+    background-image:-ms-linear-gradient(top, #f89c27 25%, #980126 75%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.25, #f89c27),
+        color-stop(0.75, #980126)
+    );
+    /* Altro Mercato Rosso color="#980126" ; Chico Mendes giallo color="#f89c27" */
+    /*
     background-color:#E4E4E4;
     background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
@@ -35,6 +48,7 @@ body {
         color-stop(0, #A7A7A7),
         color-stop(0.51, #E4E4E4)
     );
+    */
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
@@ -83,7 +97,7 @@ h1 {
     -webkit-border-radius:4px;
     color:#FFFFFF;
     font-size:12px;
-    margin:0px 30px;
+    margin:40px 40px;
     padding:2px 0px;
 }
 
