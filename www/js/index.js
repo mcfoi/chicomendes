@@ -27,6 +27,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('backbutton', this.onBackButton, false);
     },
     // deviceready Event Handler
     //
@@ -35,6 +36,16 @@ var app = {
     onDeviceReady: function() {
         window.location="http://www.mcfoi.it/esrimaps/";
         // app.receivedEvent('deviceready');
+    },
+    onBackButton: function (e) {
+        alert("Back");
+        if ($.mobile.activePage.is('#homepage')) {
+            //e.preventDefault();
+            //navigator.app.exitApp();
+        }
+        else {
+            navigator.app.backHistory();
+        }
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
