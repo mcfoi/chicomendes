@@ -19,6 +19,12 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        var doRefresh = $("#refresh").val();
+        if ( doRefresh == 'yes' ) {
+            navigator.app.exitApp();
+        } else {
+            $('#refresh').val('yes');
+        }
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -27,14 +33,16 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        //document.addEventListener('backbutton', this.onBackButton, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        window.location="http://www.mcfoi.it/esrimaps/";
+        window.location = "http://apecar.adcoop.it/";
         // app.receivedEvent('deviceready');
+        //navigator.app.exitApp();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
