@@ -1,9 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="it.adcoop.chicomendes"
-        version="1.4.3"
-        android-versionCode="1.4.3"
-        ios-CFBundleVersion="1.4.3"
-        xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android-versionCode="1.4.3" id="it.adcoop.chicomendes" ios-CFBundleVersion="1.4.3" version="1.4.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>ChicoMendes</name>
     <description>
         Hello World sample application that responds to the deviceready event.
@@ -85,5 +81,5 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <engine name="android" spec="^4.0.0" />
+    <engine name="android" spec="^4.0.2" />
 </widget>
