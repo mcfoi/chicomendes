@@ -13,6 +13,9 @@
     <!-- Leaflet 0.7.3 -->
     <link href="./leaflet-0.7.3/leaflet.css" rel="stylesheet" >
     
+    <!-- Leaflet GPS => http://labs.easyblog.it/maps/leaflet-gps/ -->
+    <link href="leaflet-gps-1.0.2/leaflet-gps.min.css" rel="stylesheet" >
+    
     <!-- Custom styles for this template -->
     <link href="map-page.css" rel="stylesheet">
 
@@ -71,16 +74,26 @@
     <script src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
     <!-- Leaflet 0.7.3 -->
 	<script src="./leaflet-0.7.3/leaflet.js"></script> <!-- or use leaflet-src.js -->
+    <!-- Leaflet GPS => http://labs.easyblog.it/maps/leaflet-gps/ -->
+	<script src="leaflet-gps-1.0.2/leaflet-gps.min.js"></script>
     <script type="text/javascript">
+	/* THIS FUNCTION IS BETTER MOVED IN THE map-page.js FILE */
     function initializeMap() {
-		var map = new L.Map('mapDiv');
-	
-		var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-		var osmAttrib = 'Map data © OpenStreetMap contributors';
-		var osm = new L.TileLayer(osmUrl, { attribution: osmAttrib });
-	
-		map.setView(new L.LatLng(43.069452, -89.411373), 11);
+		// Standard Leaflet Map initialization, tilelayer creation and centering
+		var map = new L.Map('mapDiv');	
+		// var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'; //Other OSM Style: a bit overdetailed!
+		var osmUrl = 'http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png';
+		var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a> Tiles Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a><img src="http://developer.mapquest.com/content/osm/mq_logo.png"> ';
+		var osm = new L.TileLayer(osmUrl, { attribution: osmAttrib });	
+		map.setView(new L.LatLng(45.465, 9.185), 14);
 		map.addLayer(osm);
+		// Add Scale control
+		map.addControl( new L.control.scale( {'imperial':false,'maxWidth': 100}) );
+		// Add 'custom' GPS Control : http://labs.easyblog.it/maps/leaflet-gps/
+		// autoActive is set TRUE =>
+		// => mobile users will be centered on their position if device GPS is on
+		// => desktop users will be asket to provide or not their position, then the map will react accordingly
+		map.addControl( new L.Control.Gps({autoActive:true}) );
 	}
 	$(document).ready(function(){
 		initializeMap();
