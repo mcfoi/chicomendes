@@ -83,7 +83,7 @@
 		var map = new L.Map('mapDiv');	
 		// var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'; //Other OSM Style: a bit overdetailed!
 		var osmUrl = 'http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png';
-		var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a> Tiles Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a><img src="http://developer.mapquest.com/content/osm/mq_logo.png"> ';
+		var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a>, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a> Tiles Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a><img src="http://developer.mapquest.com/content/osm/mq_logo.png"> ';
 		var osm = new L.TileLayer(osmUrl, { attribution: osmAttrib });	
 		map.setView(new L.LatLng(45.465, 9.185), 14);
 		map.addLayer(osm);
