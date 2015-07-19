@@ -33,7 +33,6 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        //document.addEventListener('backbutton', this.onBackButton, false);
     },
     // deviceready Event Handler
     //
@@ -46,14 +45,44 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        /*
+        
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
+		
+		
+		var doRefresh = $("#refreshed").val();
+        if ( doRefresh == 'no' ) {
+			$("#refreshed").val('yes');
+			listeningElement.setAttribute('style', 'display:none;');
+			receivedElement.setAttribute('style', 'display:block;');
+            //navigator.app.exitApp();
+        } else {
+			$("#refreshed").val('no');
+			var backMsg = "Premi 'indietro' per uscire";
+        	listeningElement.setAttribute('style', 'display:block;');
+        	listeningElement.innerHTML = backMsg;			
+			receivedElement.setAttribute('style', 'display:none;');
+		}
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:none;');
-        */
+		/*
+		var e=parentElement.getElementById("refreshed");
+		if(e.value=="no"){
+			e.value="yes";
+			listeningElement.setAttribute('style', 'display:none;');
+		} else {
+			e.value="no";
+			var backMsg = "Premi 'indietro' per uscire";
+			listeningElement.innerHTML = backMsg;
+			listeningElement.setAttribute('style', 'display:block;');
+			//document.getElementById("listening").innerHTML = backMsg;
+			// location.reload();
+		}
+		*/
+		
+		//listeningElement.setAttribute('style', 'display:none;');
+        //receivedElement.setAttribute('style', 'display:block;');
+        
         console.log('Received Event: ' + id);
     }
 };
