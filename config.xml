@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="it.adcoop.chicomendes"
-        version="1.5.4"
-        android-versionCode="1.5.4"
-        ios-CFBundleVersion="1.5.4"
+        version="1.5.5"
+        android-versionCode="1.5.5"
+        ios-CFBundleVersion="1.5.5"
         xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>ChicoMendes</name>
     <description>
@@ -83,6 +83,16 @@
     <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
     <gap:splash gap:platform="blackberry" src="www/res/screen/blackberry/screen-225.png" />
+    <gap:splash gap:platform="ios" height="320" src="screen-iphone-landscape.png" width="480" />
+    <gap:splash gap:platform="ios" height="640" src="screen-iphone-landscape-2x.png" width="960" />
+    <gap:splash gap:platform="ios" height="480" src="screen-iphone-portrait.png" width="320" />
+    <gap:splash gap:platform="ios" height="960" src="screen-iphone-portrait-2x.png" width="640" />
+    <gap:splash gap:platform="ios" height="568" src="screen-iphone-portrait-568h.png" width="320" />
+    <gap:splash gap:platform="ios" height="1136" src="screen-iphone-portrait-568h-2x.png" width="640" />
+    <gap:splash gap:platform="ios" height="768" src="screen-ipad-landscape.png" width="1024" />
+    <gap:splash gap:platform="ios" height="768" src="screen-ipad-landscape.png" width="1024" />
+    <gap:splash gap:platform="ios" height="1024" src="screen-ipad-portrait.png" width="768" />
+    <gap:splash gap:platform="ios" height="1024" src="screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="480" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
     <gap:splash gap:platform="ios" height="960" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
     <gap:splash gap:platform="ios" height="568" src="www/res/screen/ios/screen-iphone-portrait-568h.png" width="320" />
