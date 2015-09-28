@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="it.adcoop.chicomendes"
+<widget id="it.adcoop.equa"
         version="1.5.7.4"
         android-versionCode="1.5.7.4"
         ios-CFBundleVersion="1.5.7.4"
         xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>ChicoMendes</name>
+    <name>èqua</name>
     <description>
         èqua : applicazione per la ricerca dei punti vendita mobili di AltroMercato.
     </description>
@@ -102,6 +102,10 @@
 	<gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />
+	<!-- A wildcard can be used to whitelist the entire network,
+     over HTTP and HTTPS.
+     *NOT RECOMMENDED* -->
+	<allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
