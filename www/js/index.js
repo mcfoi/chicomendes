@@ -46,6 +46,9 @@ var app = {
 
 		listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
+		
+		//window.location = "http://apecar.adcoop.it/";
+		cordova.InAppBrowser.open('http://apecar.adcoop.it', '_blank', 'location=yes');
 
         console.log('Received Event: ' + id);
     }
